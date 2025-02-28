@@ -14,7 +14,7 @@ const Home = () => {
     }
   }, [navigate]);
 
-  // Handle Login
+  
   const handleLogin = (e) => {
     e.preventDefault();
 
