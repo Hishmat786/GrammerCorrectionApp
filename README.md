@@ -15,7 +15,7 @@ If you are developing a production application, we recommend using TypeScript an
 
 Here are some useful resources to help you work with React and Vite:  
 
-- **OpenAi Chat**: [https://vitejs.dev/]([https://platform.openai.com/docs/api-reference/chat/create](https://platform.openai.com/docs/api-reference/chat/create))  
-- **YouTube**: [[https://react.dev/](https://www.youtube.com/watch?v=_tYuhnlw7OU)]([https://react.dev/](https://www.youtube.com/watch?v=_tYuhnlw7OU))  
- 
+- **OpenAi Chat**: [https://platform.openai.com/docs/api-reference/chat/create](https://platform.openai.com/docs/api-reference/chat/create)  
+- **YouTube**: [https://www.youtube.com/watch?v=_tYuhnlw7OU](https://www.youtube.com/watch?v=_tYuhnlw7OU)  
+  
 
