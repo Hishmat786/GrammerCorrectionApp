@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 
 function GrammarChecker() {
-    
+
     const API_KEY = import.meta.env.VITE_API_KEY
-    console.log(API_KEY)
+    const navigate = useNavigate();
+
+    // console.log(API_KEY)
     const [text, setText] = useState("");
     const [highlightedText, setHighlightedText] = useState("");
     const [loading, setLoading] = useState(false);
@@ -22,7 +24,7 @@ function GrammarChecker() {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: `Bearer ${API_KEY}`, 
+                    Authorization: `Bearer ${API_KEY}`,
                 },
                 body: JSON.stringify({
                     model: "gpt-3.5-turbo",
@@ -75,9 +77,20 @@ function GrammarChecker() {
         setHighlightedText(formattedText);
     };
 
+    function handleLogout(){
+        if(localStorage.getItem("isAuthenticated")!=='false'){
+            localStorage.isAuthenticated='false'
+            alert("Logout Successful")
+            navigate('/')
+        }
+    }
+
     return (
         <div className="text-center p-5">
-            <h2 className="text-2xl text-blue-500 font-bold mb-4">Live Grammar Checker</h2>
+            <div className=" flex justify-between ">
+                <h2 className="text-2xl text-blue-500 font-bold mb-4">Live Grammar Checker</h2>
+                <button className="text-2xl text-blue-400" onClick={handleLogout}>Logout</button>
+            </div>
 
             <div
                 className="border p-4 w-3/4 mx-auto min-h-[50px] bg-gray-100 rounded text-left"
